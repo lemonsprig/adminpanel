@@ -4,83 +4,153 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Admin Panel</title>
 </head>
 <body>
   <div class="container">
     <div class="sidebar">
-      <img src="" alt="" class="logo">
-      <h1 id="title"></h1>
+      <img src="logo.png" alt="" class="logo">
       <ul class="useractions">
-        <li>list item 1</li>
-        <li>list item 2</li>
-        <li>list item 3</li>
-        <li>list item 4</li>
-        <li>list item 5</li>
-        <li>list item 6</li>
+        <li><span class="mdi mdi-home"></span>Home</li>
+        <li><span class="mdi mdi-card-account-details-outline"></span>Profile</li>
+        <li><span class="mdi mdi-message-reply-outline"></span>Messages</li>
+        <li><span class="mdi mdi-clock-time-four-outline"></span>History</li>
+        <li><span class="mdi mdi-clipboard-text-outline"></span>Tasks</li>
+        <li><span class="mdi mdi-account-group"></span>Communities</li>
       </ul>
       <ul class="systemactions">
-        <li>list item 1</li>
-        <li>list item 2</li>
-        <li>list item 3</li>
+        <li><span class="mdi mdi-cog"></span>Settings</li>
+        <li><span class="mdi mdi-help"></span>Support</li>
+        <li><span class="mdi mdi-shield-check"></span>Privacy</li>
       </ul>
     </div>
     <div class="header">
-      <div class="searchbar"></div>
-      <div class="userinfo"></div>
-      <div class="usermessage"></div>
-      <div class="useractions"></div>
+      <div class="searchbar">
+        <input type="text" placeholder="search...">
+        <button type="submit" id="searchbtn"><span class="mdi mdi-magnify"></span></button>
+      </div>
+      <div class="userinfo">
+        <span class="mdi mdi-bell-ring"></span>
+        <div class="smallprofileimg">
+          <img src="./images/avatar_11.svg" alt="small profile image">
+        </div>
+        <p>Eric Jones</p>
+      </div>
+      <div class="usermessage">
+        <div class="profileimg">
+          <img src="./images/avatar_11.svg" alt="profile image">
+        </div>
+        <div>
+          <p class="greeting">Hi, there</p>
+          <p class="username">Eric Jones (@ericj)</p>
+        </div>
+      </div>
+      <div class="headerbuttons">
+        <button class="btn" id="new">New</button>
+        <button class="btn" id="upload">Upload</button>
+        <button class="btn" id="share">Share</button>
+      </div>
     </div>
     <div class="main">
       <div class="projects">
         <h3>Your Projects</h3>
-        <ul>
-          <li>
-            <p class="cardtitle">project 1</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, dolore.</p>
-          </li>
-          <li>
-            <p class="cardtitle">project 2</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quaerat.</p>
-          </li>
-          <li>
-            <p class="cardtitle">project 3</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, commodi.</p>
-          </li>
-          <li>
-            <p class="cardtitle">project 3</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, neque!</p>
-          </li>
-          <li>
-            <p class="cardtitle">project 3</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, amet.</p>
-          </li>
-          <li>
-            <p class="cardtitle">project 3</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, eos.</p>
-          </li>
-        </ul>
+        <div class="card-container"c>
+          <div class="card">
+            <div class="card-edge"></div>
+            <div class="card-text">
+              <h3>project 1</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing edivt. Optio, dolore.</p>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn" id="favourite"><span class="mdi mdi-star-plus-outline"></span></button>
+              <button class="card-btn" id="watch"><span class="mdi mdi-eye-plus-outline"></span></button>
+              <button class="card-btn" id="share"><span class="mdi mdi-share-variant-outline"></span></button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-edge"></div>
+            <div class="card-text">
+              <h3>project 2</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat numquam quae amet optio, perferendis a dignissimos repellat, ullam, nemo id similique? Sequi dolorem praesentium error?</p>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn" id="favourite"><span class="mdi mdi-star-plus-outline"></span></button>
+              <button class="card-btn" id="watch"><span class="mdi mdi-eye-plus-outline"></span></button>
+              <button class="card-btn" id="share"><span class="mdi mdi-share-variant-outline"></span></button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-edge"></div>
+            <div class="card-text">
+              <h3>project 3</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, iusto a! A recusandae, quos temporibus odio est ducimus doloremque. Veritatis libero placeat illum voluptas asperiores ipsum obcaecati culpa magnam, omnis pariatur enim dolorum dolore, assumenda hic natus nam est! Suscipit sunt maxime libero cupiditate ad nulla voluptatibus laboriosam, cum debitis.</p>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn" id="favourite"><span class="mdi mdi-star-plus-outline"></span></button>
+              <button class="card-btn" id="watch"><span class="mdi mdi-eye-plus-outline"></span></button>
+              <button class="card-btn" id="share"><span class="mdi mdi-share-variant-outline"></span></button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-edge"></div>
+            <div class="card-text">
+              <h3>project 4</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quos distinctio facilis voluptatibus minima rem repudiandae placeat, libero iure similique ex exercitationem quaerat perspiciatis neque cumque odit ipsa sapiente numquam?</p>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn" id="favourite"><span class="mdi mdi-star-plus-outline"></span></button>
+              <button class="card-btn" id="watch"><span class="mdi mdi-eye-plus-outline"></span></button>
+              <button class="card-btn" id="share"><span class="mdi mdi-share-variant-outline"></span></button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-edge"></div>
+            <div class="card-text">
+              <h3>project 5</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos impedit vero qui est ex tempore delectus placeat eius. Repudiandae aperiam suscipit dignissimos ut saepe tempore aut quis tempora corrupti eaque.</p>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn" id="favourite"><span class="mdi mdi-star-plus-outline"></span></button>
+              <button class="card-btn" id="watch"><span class="mdi mdi-eye-plus-outline"></span></button>
+              <button class="card-btn" id="share"><span class="mdi mdi-share-variant-outline"></span></button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-edge"></div>
+            <div class="card-text">
+              <h3>project 6</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus delectus sed excepturi, voluptatem quia cupiditate id quos quae vitae mollitia magni fugiat reiciendis placeat sapiente.</p>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn" id="favourite"><span class="mdi mdi-star-plus-outline"></span></button>
+              <button class="card-btn" id="watch"><span class="mdi mdi-eye-plus-outline"></span></button>
+              <button class="card-btn" id="share"><span class="mdi mdi-share-variant-outline"></span></button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="Announcements">
+      <div class="information">
         <h3>Announcements</h3>
-        <ul>
-          <li>announcement</li>
-          <li>announcement</li>
-          <li>announcement</li>
-        </ul>
-      </div>
-      <div class="Trending">
+        <div class="card">
+          <ul>
+            <li>announcement</li>
+            <li>announcement</li>
+            <li>announcement</li>
+          </ul>
+        </div>
         <h3>Trending</h3>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        
-
+        <div class="card">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
+
 </body>
 </html>
