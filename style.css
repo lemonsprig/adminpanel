@@ -1,3 +1,13 @@
+:root {
+
+  --background: #B4C5E4;
+  --aside: #3C3744;
+  --card: #FBFFF1;
+  --button: #090C9B;
+  --button-light: #3066BE;
+
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -43,7 +53,7 @@ ul {
   height: 100vh;
   display: grid;
   grid-template: auto 4fr / 1fr 4fr; 
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
 }
 
 .sidebar {
@@ -51,7 +61,8 @@ ul {
   grid-row: 1 / 3;
   display: flex;
   flex-direction: column;
-  color: #000;
+  color: #FBFFF1;
+  background-color: var(--aside);
 }
 
 .sidebar h1 {
@@ -79,12 +90,14 @@ ul {
 }
 
 .main {
+  padding: 1rem;
   grid-column-start: 2;
   grid-row-start: 2;
   display: grid;
   grid-template-columns: 2fr 1fr;
   padding-top: 1rem;
   gap: 1rem;
+  background-color: var(--background);
 }
 
 .main h3 {
@@ -106,22 +119,27 @@ ul {
 }
 
 .card {
-  display: grid;
-  grid-template: 1fr auto / 1rem 1fr;
-  background-color: aliceblue;
   border: 1px solid black;
   border-radius: 10px;
+  box-shadow: 0 8px 5px #555;
+  background-color: #fff;
+}
+
+.card.project {
+  display: grid;
+  grid-template: 1fr auto / 1rem 1fr;
   height: 300px;
-  box-shadow: 0 8px 5px #ccc;
   overflow: hidden;
 }
 
 .card-edge {
   grid-row: 1 / -1;
-  background-color: cadetblue;
+  background-color: var(--button-light);
 }
 
 .card-text {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
 }
 
@@ -138,11 +156,32 @@ ul {
   font-size: 2rem;
 }
 
+.card.trending {
+
+}
+
+.trend {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.information ul li{
+  margin-bottom: 0.5rem;
+}
+
+.information hr {
+  margin: 1rem 0;
+}
+
 .header {
+  padding: 1rem;
   display: grid;
   grid-template: 1fr auto / 2fr 1fr;
   row-gap: 1em;
-
+  background-color: var(--button-light);
+  color: #FFF;
 }
 
 .header .mdi {
@@ -151,21 +190,28 @@ ul {
 
 .searchbar {
   display: flex;
-  padding: 0.5rem 0
-  
+  padding: 0.5rem 0;
+  background-color: #3066BE;
 }
 
 .searchbar #searchbtn{
   border: none;
   background-color: transparent;
   padding-left: 1rem;
+  color: #fff;
 }
 
 .searchbar input {
   padding-left: 1rem;
   border-radius: 999rem;
   flex: 1;
-  font-size: 1rem
+  font-size: 1rem;
+  background-color: var(--background);
+  border: 1px solid var(--background);
+}
+
+.searchbar input:focus-visible {
+  outline: 4px solid #090C9B;
 }
 
 .userinfo {
@@ -179,11 +225,16 @@ ul {
 
 .smallprofileimg, .profileimg {
   background-color: cadetblue;
-  border-radius: 50%;
-  height: 100%;
+  border-radius: 100%;
 }
-.userinfo img {
-  height: 100%;
+
+.smallprofileimg {
+  height: 50px;
+  width: auto;
+}
+
+.profileimg {
+  height: 75px;
 }
 
 .userinfo p {
@@ -201,7 +252,7 @@ ul {
 }
 
 .usermessage img{
-  height: 100px;
+  height: 75px;
   width: auto;
 }
 
@@ -217,7 +268,16 @@ ul {
   flex: 1;
   border: none;
   border-radius: 4rem;
-  background-color: yellow;
+  background-color: var(--button);
   height: 2rem;
   align-content: center;
+  color: var(--card);
+}
+
+.btn:hover {
+  box-shadow:  0px 0px 10px 5px var(--background);
+}
+
+.btn:active {
+  transform: scale(0.9);
 }
